@@ -1,0 +1,56 @@
+﻿<Window x:Class="Zadanie1.AddAgent"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zadanie1"
+        mc:Ignorable="d"
+        SizeToContent="WidthAndHeight"
+        Title="AddAgent">
+    <StackPanel Margin="10">
+        <Label Content="Имя"/>
+        <TextBox x:Name="Name" Width="200" Padding="5" Text="{Binding name}"/>
+
+        <Label Content="Email" Margin="0,10,0,0"/>
+        <TextBox x:Name="Email" Width="200" Padding="5" Text="{Binding email}"/>
+
+        <Label Content="Телефон" Margin="0,10,0,0"/>
+        <TextBox x:Name="Phone" Width="200" Padding="5" Text="{Binding phone}"/>
+
+        <Label Content="Фото" Margin="0,10,0,0"/>
+        <Image x:Name="img_Product"  
+                   Height="65"
+                   Width="100"
+               />
+        
+        <Button Name="AddImage" Content="Загрузить фото" Margin="0,10,0,0" Width="110" Click="AddImage_Click"/>
+
+        <Label Content="Адрес" Margin="0,10,0,0"/>
+        <TextBox x:Name="Adress" Width="200" Padding="5" Text="{Binding adress}"/>
+
+        <Label Content="Приоритет" Margin="0,10,0,0"/>
+        <TextBox x:Name="Priority" Width="200" Padding="5" Text="{Binding priority}"/>
+
+        <Label Content="Директор" Margin="0,10,0,0"/>
+        <TextBox x:Name="Boss" Width="200" Padding="5" Text="{Binding director}"/>
+
+        <Label Content="ИНН" Margin="0,10,0,0"/>
+        <TextBox x:Name="INN" Width="200" Padding="5" Text="{Binding INN}"/>
+
+        <Label Content="КПП" Margin="0,10,0,0"/>
+        <TextBox x:Name="KPP" Width="200" Padding="5" Text="{Binding KPP}"/>
+
+        <Label Content="Тип агента" Margin="0,10,0,0"/>
+        <ComboBox x:Name="AgentType"                       
+                      VerticalContentAlignment="Center" 
+                      Height="30"
+                        Validation.ErrorTemplate="{x:Null}"
+                      SelectionChanged="AgentType_SelectionChanged"
+                      VerticalAlignment="Top"
+                      SelectedItem="{Binding ID_Type_Agents}"
+                      DisplayMemberPath="Name"
+                  />
+
+        <Button x:Name="AddAgentButton" Content="Добавить агента" Margin="0,10,0,0" Click="AddAgentButton_Click"/>
+    </StackPanel>
+</Window>

@@ -9,7 +9,6 @@
 
 namespace Zadanie1
 {
-    using System;
     using System.Collections.Generic;
     
     public partial class Agents
@@ -35,5 +34,6 @@ namespace Zadanie1
         public virtual Type_Agents Type_Agents { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product_Sale> Product_Sale { get; set; }
+
     }
 }
